@@ -1,0 +1,49 @@
+﻿@model List<Time_PotY.Models.TimePerson>
+
+<head>
+</head>
+
+<table>
+    <h1> Person of the Year Results </h1>
+    <thead>
+        <tr>
+            <th scope="col">Year</th>
+            <th scope="col">Honor</th>
+            <th scope="col">Name</th>
+            <th scope="col">Country</th>
+            <th scope="col">Birth Year</th>
+            <th scope="col">Death Year</th>
+            <th scope="col">Category</th>
+            <th scope="col">Context</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td data-label="Year">@item.Year</td>
+                <td data-label="Honor">@item.Honor</td>
+                <td data-label="Name">@item.Name</td>
+                <td data-label="Country">@item.Country</td>
+                @if (item.Birth_Year == 0)
+                {
+                    <td datat-label="Birth Year">Unknown</td>
+                }
+                else
+                {
+                    <td data-label="Birth Year">@item.Birth_Year</td>
+                }
+                @if (item.DeathYear == 0)
+                {
+                    <td datat-label="Death Year">N/A</td>
+                }
+                else
+                {
+                    <td data-label="Death Year">@item.DeathYear</td>
+                }
+                <td data-label="Category">@item.Category</td>
+                <td data-label="Context">@item.Context</td>
+            </tr>
+        }
+    </tbody>
+</table>

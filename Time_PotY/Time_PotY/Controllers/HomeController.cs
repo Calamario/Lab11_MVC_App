@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Time_PotY.Models;
 
 namespace Time_PotY.Controllers
 {
@@ -22,12 +23,13 @@ namespace Time_PotY.Controllers
 
         public IActionResult Results(int startYear, int endYear)
         {
-            return RedirectToAction("ResponseExample", new):
+            //Okay to do for titles
+            ViewData["Message"] = "Person of the Year Results";
+
+            TimePerson person = new TimePerson();
+
+            return View(person.GetPeople(startYear, endYear)); 
         }
 
-        public IActionResult ResponseExample()
-        {
-
-        }
     }
 }
