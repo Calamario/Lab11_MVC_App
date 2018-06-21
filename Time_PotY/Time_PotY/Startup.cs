@@ -26,6 +26,7 @@ namespace Time_PotY
                 app.UseDeveloperExceptionPage();
             }
 
+            //routes to default when the page is loaded
             app.UseMvc(route =>
             {
                 route.MapRoute(
@@ -33,6 +34,10 @@ namespace Time_PotY
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
+            //To use the css file
+            app.UseStaticFiles();
+
+            //runs when things above fails
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");

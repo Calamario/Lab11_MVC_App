@@ -1,13 +1,23 @@
 ﻿<head>
+    <link href="~/StyleSheet.css" rel="stylesheet" type="text/css"/>
 </head>
 
+<body>
+    <form method="post">
+        <img src="http://www.2ndvote.com/wp-content/uploads/2016/06/time_logo.png" alt="TimeLogo" />
+        <div>
+            <label for="StartYear">Start Year: </label>
+            <input maxlength="4" name="StartYear" />
+        </div>
 
-<form method="post">
-    <label for="StartYear">Start Year: </label>
-    <input maxlength="4" name="StartYear"/>
+        <div>
+            <label for="EndYear">End Year: </label>
+            <input maxlength="4" name="EndYear" />
+        </div>
 
-    <label for="EndYear">End Year: </label>
-    <input maxlength="4" name="EndYear"/>
+        <div>
+            <button type="submit">Search</button>
+        </div>
 
-    <button type="submit">Search</button>
-</form>
+    </form>
+</body>

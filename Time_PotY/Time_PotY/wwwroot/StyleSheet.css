@@ -1,0 +1,23 @@
+form {
+    border: 10px solid red;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid red;
+}
